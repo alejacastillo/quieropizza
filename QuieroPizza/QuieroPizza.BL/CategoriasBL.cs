@@ -10,7 +10,7 @@ namespace QuieroPizza.BL
     {
             Contexto _contexto;
 
-            public List<Producto> listadeCategorias { get; set; }
+            public List<Categoria> listadeCategorias { get; set; }
 
             public CategoriasBL()
             {
@@ -42,7 +42,7 @@ namespace QuieroPizza.BL
             }
 
 
-            public Producto ObtenerCategoria(int id)
+            public Categoria ObtenerCategoria(int id)
             {
                 var categoria = _contexto.Categorias.Find(id);
                 return categoria;

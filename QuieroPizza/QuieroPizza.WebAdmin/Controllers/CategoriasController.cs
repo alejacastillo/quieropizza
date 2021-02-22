@@ -26,7 +26,7 @@ namespace QuieroPizza.WebAdmin.Controllers
         [HttpPost]
         public ActionResult Crear(Categoria categoria)
         {
-            _categotiasBL.GuardarCategoria(categoria);
+            _categoriasBL.GuardarCategoria(categoria);
             return RedirectToAction("Index");
         }
 
@@ -46,7 +46,7 @@ namespace QuieroPizza.WebAdmin.Controllers
 
         public ActionResult Detalle(int id)
         {
-            var producto = _categoriasBL.ObtenerCategoria(id);
+            var categoria = _categoriasBL.ObtenerCategoria(id);
 
             return View(categoria);
         }
