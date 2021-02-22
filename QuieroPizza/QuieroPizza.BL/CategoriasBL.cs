@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace QuieroPizza.BL
 {
-    class CategoriasBL
+   public  class CategoriasBL
     {
             Contexto _contexto;
 

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using QuieroPizza.BL;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -23,7 +24,7 @@ namespace QuieroPizza.WebAdmin.Controllers
         }
 
         [HttpPost]
-        public ActionResult Crear(Categorias categoria)
+        public ActionResult Crear(Categoria categoria)
         {
             _categotiasBL.GuardarCategoria(categoria);
             return RedirectToAction("Index");
@@ -37,7 +38,7 @@ namespace QuieroPizza.WebAdmin.Controllers
         }
 
         [HttpPost]
-        public ActionResult Editar(Categorias categoria)
+        public ActionResult Editar(Categoria categoria)
         {
             _categoriasBL.GuardarCategoria(categoria);
             return RedirectToAction("Index");
@@ -45,7 +46,7 @@ namespace QuieroPizza.WebAdmin.Controllers
 
         public ActionResult Detalle(int id)
         {
-            var producto = _categoriaBL.ObtenerCategoria(id);
+            var producto = _categoriasBL.ObtenerCategoria(id);
 
             return View(categoria);
         }
@@ -56,7 +57,7 @@ namespace QuieroPizza.WebAdmin.Controllers
             return View(categoria);
         }
         [HttpPost]
-        public ActionResult Eliminar(Categorias categoria)
+        public ActionResult Eliminar(Categoria categoria)
         {
             return RedirectToAction("Index");
         }
